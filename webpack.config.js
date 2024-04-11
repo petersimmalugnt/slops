@@ -37,7 +37,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `${cssFileName}.js`,
+      filename: `${cssFileName}.css`,
     }),
   ],
   optimization: {
