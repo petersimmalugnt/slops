@@ -5,12 +5,11 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/js/main.js", // Huvudsaklig JavaScript-ingångspunkt
-    style: "./src/css/main.scss", // Huvudsaklig CSS-ingångspunkt genererad från SCSS
+    main: "./src/js/main.js",
+    style: "./src/css/main.scss",
   },
   output: {
-    // Dynamiskt namn baserat på entry-punktens namn
-    filename: "[name].js", // Använd '[name].js' här för att undvika konflikter
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
   },
   module: {
@@ -38,8 +37,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      // Säkerställ att CSS-filerna har ett unikt namn
-      filename: "[name].css", // Använd '[name].css' här
+      filename: "[name].css",
     }),
   ],
   optimization: {
