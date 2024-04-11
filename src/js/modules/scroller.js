@@ -98,6 +98,8 @@ const updateScrollProgress = (data, el) => {
     el.setAttribute(`data-${data.name}y-inview`, isInView[1]);
     el.setAttribute(`data-${data.name}x-passed`, hasPassed[0]);
     el.setAttribute(`data-${data.name}y-passed`, hasPassed[1]);
+    el.style.setProperty(`--${data.name}x-inview`, isInView[0] ? 1 : 0);
+    el.style.setProperty(`--${data.name}y-inview`, isInView[1] ? 1 : 0);
     el.style.setProperty(`--${data.name}x-passed`, hasPassed[0] ? 1 : 0);
     el.style.setProperty(`--${data.name}y-passed`, hasPassed[1] ? 1 : 0);
     if (!data.scrub) {
